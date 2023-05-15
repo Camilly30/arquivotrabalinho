@@ -32,6 +32,17 @@ app.post('/pessoas/adicionar', async function (req, res) {
   }
 });
 
+// Rota para excluir um usuário
+app.post('/pessoas/delete', async function (req, res) {
+  try {
+    await Pessoa.destroy({ where: { id: req.body.id } });
+    res.redirect('/pessoas');
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Ocorreu um erro ao excluir o usuário.' });
+  }
+});
+
 
 app.listen(3000, function() {
   console.log('App de Exemplo escutando na porta 3000!')
