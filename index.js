@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const { usuario , pessoa} = require('./models');
+const {  pessoa} = require('./models');
 
 const app = express();
 
@@ -33,7 +33,7 @@ app.post('/pessoas/adicionar', async function (req, res) {
 });
 
 // Rota para excluir um usuário
-app.post('/pessoas/delete', async function (req, res) {
+app.post('/pessoas/deletar', async function (req, res) {
   try {
     await Pessoa.destroy({ where: { id: req.body.id } });
     res.redirect('/pessoas');

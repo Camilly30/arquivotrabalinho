@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/estilo.css">
-  <title>DELETARRRR</title>
-</head>
-<body>
-  <% pessoas.forEach((pessoas) => { %>
-    <div class="list">
-      <div>
-        <%= pessoas.nome %>
-      </div>
-      <div class="action">
-       
-        <form method="post" action="/pessoas/delete">
-          <input type="hidden" name="id" value="<%= pessoas.id %>">
-          <button>Deletar</button>
-        </form>
-      </div>
-    </div>
+<% pessoas.forEach((pessoa) => { %>
+   <%= pessoa.nome %>
 <% }) %>
-</body>
-</html>
 
