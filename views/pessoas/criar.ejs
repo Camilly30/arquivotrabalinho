@@ -1,23 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+ <html lang="en">
  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
- </head>
- <body>
-    <form method="post" action="/pessoas/criar">
-      <label>Formulário</label> <br/>
+    <link rel="stylesheet"  href="/public/css.css" />
+   <title>Formulário</title>
+  </head>
+  <body>
+   <form method="post" action="/pessoas/adicionar">
+     <label>Formulário</label> <br/>
 
       <label>Nome:</label> <input id="nome" name="nome" type="text" />
-      <label>Sobrenome:</label> <input name="sobrenome" id="sobrenome" type="text" />
+       <label>Sobrenome:</label> <input name="sobrenome" id="sobrenome" type="text" />
       <label>Idade:</label> <input id="idade" name="idade" type="number" max="100" min="1"/>
-      <input type="submit" value="Enviar">
-
-     
+       <input type="submit" value="Enviar" >
     </form>
-  </body>
-
+    <form method="post" action="/pessoas/deletar">
+      <input type="hidden" name="id" value="<%= pessoas.id %>">
+      <button>Deletar</button>
+    </form>
+ </body>
 </html>
 

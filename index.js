@@ -24,7 +24,7 @@ app.get('/pessoas/criar', async function(req, res){
 
 app.post('/pessoas/adicionar', async function (req, res) {
   try {
-    await Pessoa.create(req.body);
+    await pessoa.create(req.body);
     res.redirect('/pessoas');
   } catch (err) {
     console.error(err);
@@ -35,7 +35,7 @@ app.post('/pessoas/adicionar', async function (req, res) {
 // Rota para excluir um usuário
 app.post('/pessoas/deletar', async function (req, res) {
   try {
-    await Pessoa.destroy({ where: { id: req.body.id } });
+    await pessoa.destroy({ where: { id: req.body.id } });
     res.redirect('/pessoas');
   } catch (err) {
     console.error(err);
@@ -45,5 +45,5 @@ app.post('/pessoas/deletar', async function (req, res) {
 
 
 app.listen(3000, function() {
-  console.log('App de Exemplo escutando na porta 3000!')
+  console.log('App funfando na porta 3000!')
 });

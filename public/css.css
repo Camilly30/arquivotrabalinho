@@ -1,0 +1,21 @@
+form{
+    display: flex;
+    justify-content: center;
+    margin: 50px 50px;
+  
+}
+ form {
+    max-width: 98%;
+    background-color: #000000;
+    border-radius: 30px;
+    padding: 20px 80px;
+    color: antiquewhite  ;
+   
+}
+ label{
+    color:yellow;
+    size: 90px;
+}
+body{
+    background-color: lightslategrey;
+}
