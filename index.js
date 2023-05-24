@@ -22,7 +22,7 @@ app.get('/pessoas/criar', async function(req, res){
   res.render('pessoas/criar', { pessoas });
 })
 
-app.post('/pessoas/adicionar', async function (req, res) {
+app.post('/pessoas/criar', async function (req, res) {
   try {
     await pessoa.create(req.body);
     res.redirect('/pessoas');
@@ -42,6 +42,7 @@ app.post('/pessoas/deletar', async function (req, res) {
     res.status(500).json({ message: 'Ocorreu um erro ao excluir o usuário.' });
   }
 });
+
 
 
 app.listen(3000, function() {

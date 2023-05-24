@@ -11,7 +11,12 @@ module.exports = {
         {nome: 'Clark',sobrenome:'Kent',idade: 41},
         {nome: 'Bruce',sobrenome:'Wayne',idade: 43},
         {nome: 'Kara',sobrenome:'Jorel',idade: 33},
-        {nome: 'Tony',sobrenome:'Stark',idade: 35}
+        {nome: 'Tony',sobrenome:'Stark',idade: 35},
+        {nome: 'Lola',sobrenome:'Bunny',idade: 5},
+        {nome: 'Perna',sobrenome:'Longa',idade: 73},
+        {nome: 'Patolino',sobrenome:'Pato',idade: 50},
+        {nome: 'Coisa',sobrenome:'Coisa',idade: 5000},
+        {nome: 'Mio',sobrenome:'Melog',idade: 2}
     ], {});
   },
  

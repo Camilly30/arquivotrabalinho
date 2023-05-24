@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="/public/css.css" />
+    <link rel="stylesheet"  href="/css.css" />
    <title>Formulário</title>
   </head>
-  <body>
-   <form method="post" action="/pessoas/adicionar">
-     <label>Formulário</label> <br/>
+  <body>  <h1>Formulário</h1>
+    <div class="formulario">
+         <form method="post" action="/pessoas/adicionar">
+   
+         <h2>Nome:</h2> <input id="nome" name="nome" type="text"  /><br/>
+         <h2>Sobrenome:</h2> <input name="sobrenome" id="sobrenome" type="text"  /> <br/>
+         <h2>Idade:</h2> <input id="idade" name="idade" type="number" max="100" min="1" /> <br/>
+           <button type="submit" value="Enviar" >Enviar</button>
+            <button action="/pessoas/deletar" type="submit" name="id" value="<%= pessoas.id %>">Delete</button>
+           
+         </form>
 
-      <label>Nome:</label> <input id="nome" name="nome" type="text" />
-       <label>Sobrenome:</label> <input name="sobrenome" id="sobrenome" type="text" />
-      <label>Idade:</label> <input id="idade" name="idade" type="number" max="100" min="1"/>
-       <input type="submit" value="Enviar" >
-    </form>
-    <form method="post" action="/pessoas/deletar">
-      <input type="hidden" name="id" value="<%= pessoas.id %>">
-      <button>Deletar</button>
-    </form>
- </body>
+      </div>
+  </body>
 </html>
 

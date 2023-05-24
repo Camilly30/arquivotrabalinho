@@ -1,21 +1,40 @@
-form{
-    display: flex;
-    justify-content: center;
-    margin: 50px 50px;
-  
-}
- form {
-    max-width: 98%;
-    background-color: #000000;
-    border-radius: 30px;
-    padding: 20px 80px;
-    color: antiquewhite  ;
-   
-}
- label{
+h1{
     color:yellow;
     size: 90px;
+    background-color: #000000;
+    text-align: center;
 }
+.formulario {
+    display: flex;
+    justify-content: center;
+    margin: 80px 50px;
+  
+}
+.formulario form {
+    max-width: 98%;
+    background-color: #3c3c3c;
+    border-radius: 30px;
+    padding: 60px 100px;
+    color: antiquewhite  ;
+    
+}
+
 body{
-    background-color: lightslategrey;
+    background-color: rgb(0, 0, 0);
+    font-family:monospace;
+}
+.formulario input, button{
+    background-color: #d2d2d2;
+    border-radius: 10px;
+    color: #000000;
+    padding: 15px 90px;
+    border-color:rgb(158, 158, 0);
+   
+}
+.formulario, input{
+    display: flex;
+}
+.formulario, h2{
+    color:yellow;
+    size: 90px;
 }
