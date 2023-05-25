@@ -33,9 +33,9 @@ app.post('/pessoas/criar', async function (req, res) {
 });
 
 // Rota para excluir um usuário
-app.post('/pessoas/deletar', async function (req, res) {
+app.get('/pessoas/deletar', async function (req, res) {
   try {
-    await pessoa.destroy({ where: { id: req.body.id } });
+    await pessoa.destroy({ where: { id: req.query.id } });
     res.redirect('/pessoas');
   } catch (err) {
     console.error(err);

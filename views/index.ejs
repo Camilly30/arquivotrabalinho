@@ -8,14 +8,31 @@
    <title>Pessoas</title>
 </head>
 <body>
-   <h1>
-   <% pessoas.forEach((pessoa) => { %>
-   <%= pessoa.nome %>
-   <%= pessoa.sobrenome %>
-   <%= pessoa.idade %>
-<% }) %>
-   </h1>
-</body>
+   <h1>Pessoas cadastradas</h1>
+  <center>
+   <div class="Pessoinha">
+       <div class="elementos">
+         <% pessoas.forEach((pessoa) => { %>
+          Nome: <i> <%= pessoa.nome %></i>
+          Sobrenome:<i> <%= pessoa.sobrenome %></i> 
+         Idade:<i><%= pessoa.idade %></i> 
+               <a href ="/pessoas/deletar?id=<%= pessoa.id %>" id="" onClick=(destruir())>Deletar pessoa</a><br/>
+            <% }) %>
+      </div>
+    </div>
+   </center>
+   <h2><a href="/pessoas/criar" >Cadastrar Pessoas..</a></h2>
+   <script>
+   function destruir (){
+      let rogerRoger = confirm('Tem Certeza ABSOLUTA que deseja deletar????');
+      if(rogerRoger == true){
+         alert('Deletado com sucesso')
+      }else{
+         console.log(destruir())
+      }
+   }
+   </script>
+   </body>
 </html>
 
 
